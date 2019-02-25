@@ -1,0 +1,12 @@
+#有序数组的平方，尝试了几种方法，这种最慢，但是仅仅几个数组的平方就使用了200多ms，第二种一般都要10000ms左右。
+class Solution:
+    def sortedSquares(self, A: 'List[int]') -> 'List[int]':
+         return sorted(i**2 for i in A)
+class Solution:
+    def sortedSquares(self, A: 'List[int]') -> 'List[int]':
+        a=[]
+        for i in A:
+            a.append(i**2)
+            a.sort()
+        return (a)
+#用C++一般是双指针，100ms左右。       
